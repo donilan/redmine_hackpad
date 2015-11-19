@@ -1,0 +1,33 @@
+* Redmine plugin for include hackpad content into your wiki page.
+
+** How to install
+
+*** Run the commands below:
+#+BEGIN_SRC bash
+   $ cd $(REDMINE_HOME)
+   $ ruby script/plugin install git://github.com/donilan/redmine_hackpd.git
+#+END_SRC
+
+*** Please config your access information for hackpad before you restart redmine
+    you can get those information from https://domain_name.hackpad.com/ep/account/settings/ .There are two way for config that information like below:
+
+**** define them in ~/.profile, ~/.bashrc or ~/.bash_profile
+#+BEGIN_SRC bash
+export HACKPAD_CLIENT_ID=id_from_hackpad_account_settings
+export HACKPAD_SECRET=secret_from_hackpad_account_settings
+export HACKPAD_SITE=https://domain_name.hackpad.com
+#+END_SRC
+
+**** or embed those informations on start script like below
+#+BEGIN_SRC bash
+HACKPAD_CLIENT_ID=id_from_hackpad_account_settings HACKPAD_SECRET=secret_from_hackpad_account_settings HACKPAD_SITE=https://domain_name.hackpad.com RAILS_ENV=production rails start
+#+END_SRC
+
+Note: Currently you don't have to do 'rake db:migrate_plugins' because this plugin does not use DB.
+
+** How to use
+
+1. Wherever you can use Wiki notation, you can write macro like below:
+   {{hackpad(hackpad_hash_key)}}
+
+Note: A hackpad hash key is the 11 character identifier at the end of the pad URL.
