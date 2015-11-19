@@ -1,4 +1,4 @@
-* Redmine plugin for include hackpad content into your wiki page.
+* Redmine plugin for include hackpad content into your wiki page by use macro.
 
 ** How to install
 
@@ -31,3 +31,8 @@ Note: Currently you don't have to do 'rake db:migrate_plugins' because this plug
    {{hackpad(hackpad_hash_key)}}
 
 Note: A hackpad hash key is the 11 character identifier at the end of the pad URL.
+
+** TODOs
+
+- Support summary show for hackpad content on projects screen.
+- Support more formats like txt and markdown if we really need.
