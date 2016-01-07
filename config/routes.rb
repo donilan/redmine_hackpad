@@ -1,2 +1,3 @@
-# Plugin's routes
-# See: http://guides.rubyonrails.org/routing.html
+RedmineApp::Application.routes.draw do
+  get 'hackpads/:pid' => 'hackpads#show', :as => :hackpads_show
+end

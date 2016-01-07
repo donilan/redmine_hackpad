@@ -1,0 +1,33 @@
+<div id="hackpad-<%= pid %>" class="hackpad summery" title="Click for see all or summery. Or you can scroll down to see more." >
+  <div class="loading">Loading...</div>
+</div>
+<script>
+ $('#hackpad-<%= pid %>').load('<%= Rails.application.routes.url_helpers.hackpads_show_path pid  %>');
+ $('#hackpad-<%= pid %>').click(function(){
+   if($(this).hasClass('summery')) {
+     $(this).removeClass('summery').addClass('all');
+   } else {
+     $(this).removeClass('all').addClass('summery');
+   }
+ });
+</script>
+<% # TODO: is there a better way to add some global css for redmine? %>
+<style>
+ .hackpad .loading {
+   text-align: center;
+   margin-top: 90px;
+ }
+ .hackpad.summery, .hackpad.all {
+   border: 1px solid #EEE;
+   cursor: pointer;
+ }
+ .hackpad.summery {
+   height: 180px;
+   overflow: scroll;
+ }
+ .hackpad.all {
+   height: inherit;
+   overflow: none;
+ }
+</style>
+
