@@ -2,7 +2,7 @@ Redmine::Plugin.register :redmine_hackpad do
   name 'Redmine Hackpad plugin'
   author 'Doni Leong'
   description 'Redmine plugin for include hackpad content into your wiki page by use macro.'
-  version '0.0.1'
+  version '0.0.2'
   url 'https://github.com/donilan/redmine_hackpad'
   author_url 'https://github.com/donilan'
 

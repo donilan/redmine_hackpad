@@ -34,5 +34,5 @@ Note: A hackpad hash key is the 11 character identifier at the end of the pad UR
 
 ** TODOs
 
-- Support summary show for hackpad content on projects screen.
 - Support more formats like txt and markdown if we really need.
+- Improve styles.
