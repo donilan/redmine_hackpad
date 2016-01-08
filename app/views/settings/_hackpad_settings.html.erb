@@ -1,0 +1,28 @@
+<table>
+  <tbody>
+    <tr>
+      <th>CLIENT ID from hackpad API setting</th>
+      <td>
+        <input type="text" id="<%= Hackpad::CLIENT_ID.downcase %>"
+          value="<%= Hackpad.client_id %>"
+          name="settings[<%= Hackpad::CLIENT_ID.downcase %>]" >
+      </td>
+    </tr>
+    <tr>
+      <th>SECRET from hackpad API setting</th>
+      <td>
+        <input type="text" id="<%= Hackpad::SECRET.downcase %>"
+          value="<%= Hackpad.secret %>"
+          name="settings[<%= Hackpad::SECRET.downcase %>]" >
+      </td>
+    </tr>
+    <tr>
+      <th>Hackpad site for this API</th>
+      <td>
+        <input type="text" id="<%= Hackpad::SITE.downcase %>"
+          value="<%= Hackpad.site %>"
+          name="settings[<%= Hackpad::SITE.downcase %>]" >
+      </td>
+    </tr>
+  </tbody>
+</table>

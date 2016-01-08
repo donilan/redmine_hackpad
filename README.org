@@ -9,7 +9,14 @@
 #+END_SRC
 
 *** Please config your access information for hackpad before you restart redmine
-    you can get those information from https://domain_name.hackpad.com/ep/account/settings/ .There are two way for config that information like below:
+    you can get those information from https://domain_name.hackpad.com/ep/account/settings/ .There are three way for config that information like below:
+
+**** startup your redmine after plugin is setup, setting in plugin configuration page. (RECOMMEND)
+1. Sign in as Admin.
+1. Goto plugin setting page, get into configuration page for this plugin.
+1. you will see there are three input box there.
+1. entry your API information.
+1. finish.
 
 **** define them in ~/.profile, ~/.bashrc or ~/.bash_profile
 #+BEGIN_SRC bash
