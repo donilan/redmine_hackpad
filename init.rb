@@ -13,5 +13,5 @@ Redmine::Plugin.register :redmine_hackpad do
     end
   end
 
-  settings :default => {'empty' => true}, :partial => 'settings/hackpad_settings'
+  settings :partial => 'settings/hackpad_settings'
 end
