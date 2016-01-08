@@ -1,3 +1,3 @@
 RedmineApp::Application.routes.draw do
-  get 'hackpads/:pid' => 'hackpads#show', :as => :hackpads_show
+  match 'hackpads/:pid', :to => 'hackpads#show', :as => :hackpads_show, via: [:get]
 end
